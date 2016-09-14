@@ -81,6 +81,13 @@ elif month == "December" or "January" or "February":
 else:
     season = "You didn't give me a season!"
 
+if halloween == "yes":
+    print("You were born on Halloween!")
+else:
+    if birthdate == "yes":
+        print("Happy birthday!")
+    else:
+        print("{0}, you are a {1} baby of the {2}" .format(name, season, year))
 print(season)
 print(birthday)
 print(todaymonth)
