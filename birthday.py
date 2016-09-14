@@ -71,17 +71,16 @@ if birthday == "yes" and birthmonth == "yes":
 else:
     birthdate = "no"
 
-if month == "June" or "July" or "August":
+if month == "June" or month == "July" or month == "August":
     season = "summer"
-else:
-    season = a
- month == "March" or "April" or "May":
+
+elif month == "March" or month == "April" or month == "May":
     season = "spring"
 
-elif month == "September" or "October" or "November":
+elif month == "September" or month == "October" or month == "November":
     season = "fall"
 
-elif month == "December" or "January" or "February":
+elif month == "December" or month == "January" or month == "February":
     season = "winter"
 else:
     season = "none"
@@ -104,5 +103,3 @@ else:
         print("Happy birthday!")
     else:
         print("{0}, you are a {1} baby of the {2}." .format(name, season, yeard))
-print(month)
-print(season)
