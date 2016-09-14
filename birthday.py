@@ -35,3 +35,22 @@ Example Session
 name = input("Hello, what is your name? ")
 month = input("Hi, {0}, what was the name of the month you were born in? " .format(name))
 year = input("And what year were you born in, {0}? " .format(name))
+day = int(input("And the day? "))
+
+if month == "October":
+    if day == 31:
+        print(You were born on Halloween!)
+else 
+if month == "June" or "July" or "August":
+    season = "summer"
+elif month == "March" or "April" or "May":
+    season = "spring"
+elif month == "September" or "October" or "November":
+    season = "fall"
+elif month == "December" or "January" or "February":
+    season = "winter"
+else:
+    season = "You didn't give me a season!"
+
+print(season)
+
