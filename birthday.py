@@ -31,22 +31,45 @@ Example Session
   And the day? 11
   Eric, you are a fall baby of the stone age.
 """
-
+from datetime import datetime
+from calendar import month_name
+todaymonth = datetime.today().month
+todaydate = datetime.today().day
+todaymonth = month_name[todaymonth]
 name = input("Hello, what is your name? ")
 month = input("Hi, {0}, what was the name of the month you were born in? " .format(name))
 year = input("And what year were you born in, {0}? " .format(name))
 day = input("And the day? ")
 
 if month == "October":
-    halloweenmonth == "yes"
+    halloweenmonth = "yes"
 else:
-    halloweenmonth == "no"
+    halloweenmonth = "no"
+
 if day == "31":
-    halloweenday == "yes"
+    halloweenday = "yes"
 else:
-    halloweenday == "no"
-    
-    else birthday == "not Halloween"
+    halloweenday = "no"
+
+if halloweenday == "yes" and halloweenmonth == "yes":
+    halloween = "yes"
+else:
+    halloween = "no"
+
+if todaymonth == month:
+    birthmonth = "yes"
+else:
+    birthmonth = "no"
+
+if todaydate == day:
+    birthday = "yes"
+else:
+    birthday = "no"
+
+if birthday == "yes" and birthmonth == "yes":
+    birthdate = "yes"
+else:
+    birthdate = "no"
 if month == "June" or "July" or "August":
     season = "summer"
 elif month == "March" or "April" or "May":
@@ -60,4 +83,5 @@ else:
 
 print(season)
 print(birthday)
+print(todaymonth)
 
