@@ -37,9 +37,9 @@ todaymonth = datetime.today().month
 todaydate = datetime.today().day
 todaymonth = month_name[todaymonth]
 name = input("Hello, what is your name? ")
-month = input("Hi, {0}, what was the name of the month you were born in? " .format(name))
-year = input("And what year were you born in, {0}? " .format(name))
-day = input("And the day? ")
+month = str(input("Hi, {0}, what was the name of the month you were born in? " .format(name)))
+year = int(input("And what year were you born in, {0}? " .format(name)))
+day = int(input("And the day? "))
 
 if month == "October":
     halloweenmonth = "yes"
@@ -70,16 +70,32 @@ if birthday == "yes" and birthmonth == "yes":
     birthdate = "yes"
 else:
     birthdate = "no"
+
 if month == "June" or "July" or "August":
     season = "summer"
-elif month == "March" or "April" or "May":
+else:
+    season = a
+ month == "March" or "April" or "May":
     season = "spring"
+
 elif month == "September" or "October" or "November":
     season = "fall"
+
 elif month == "December" or "January" or "February":
     season = "winter"
 else:
-    season = "You didn't give me a season!"
+    season = "none"
+
+if year >= 2000:
+    yeard = "two thousands"
+elif year <= 1980:
+    yeard = "stone age"
+elif year < 2000 and year >= 1990:
+    yeard = "nineties"
+elif year < 1990 and year >= 1980:
+    yeard = "eighties"
+else:
+    yeard = "you gave me an invalid year"
 
 if halloween == "yes":
     print("You were born on Halloween!")
@@ -87,8 +103,6 @@ else:
     if birthdate == "yes":
         print("Happy birthday!")
     else:
-        print("{0}, you are a {1} baby of the {2}" .format(name, season, year))
+        print("{0}, you are a {1} baby of the {2}." .format(name, season, yeard))
+print(month)
 print(season)
-print(birthday)
-print(todaymonth)
-
