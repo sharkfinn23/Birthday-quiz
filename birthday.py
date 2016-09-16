@@ -42,34 +42,34 @@ year = int(input("And what year were you born in, {0}? " .format(name)))
 day = int(input("And the day? "))
 
 if month == "October":
-    halloweenmonth = "yes"
+    halloweenmonth = 1
 else:
-    halloweenmonth = "no"
+    halloweenmonth = 0
 
-if day == "31":
-    halloweenday = "yes"
+if day == 31:
+    halloweenday = 1
 else:
-    halloweenday = "no"
+    halloweenday = 0
 
-if halloweenday == "yes" and halloweenmonth == "yes":
-    halloween = "yes"
+if halloweenday == 1 and halloweenmonth == 1:
+    halloween = 1
 else:
-    halloween = "no"
+    halloween = 0
 
 if todaymonth == month:
-    birthmonth = "yes"
+    birthmonth = 1
 else:
-    birthmonth = "no"
+    birthmonth = 0
 
 if todaydate == day:
-    birthday = "yes"
+    birthday = 1
 else:
-    birthday = "no"
+    birthday = 0
 
-if birthday == "yes" and birthmonth == "yes":
-    birthdate = "yes"
+if birthday == 1 and birthmonth == 1:
+    birthdate = 1
 else:
-    birthdate = "no"
+    birthdate = 0
 
 if month == "June" or month == "July" or month == "August":
     season = "summer"
@@ -96,10 +96,11 @@ elif year < 1990 and year >= 1980:
 else:
     yeard = "you gave me an invalid year"
 
-if halloween == "yes":
+
+if halloween == 1:
     print("You were born on Halloween!")
 else:
-    if birthdate == "yes":
+    if birthdate == 1:
         print("Happy birthday!")
     else:
         print("{0}, you are a {1} baby of the {2}." .format(name, season, yeard))
